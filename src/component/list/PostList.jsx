@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import styled from "styled-components";
 import PostListItem from "./PostListItem";
 
@@ -7,15 +7,15 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: center;
-  
+
   & > * {
     :not(:last-child) {
       margin-bottom: 16px;
     }
   }
-  `;
+`;
 
-export default function ({posts, onClickItem}) {
+export default function PostList({ posts, onClickItem }) {
   return (
     <Wrapper>
       {posts.map((post, index) => {
@@ -27,8 +27,8 @@ export default function ({posts, onClickItem}) {
               onClickItem(post);
             }}
           />
-        )
+        );
       })}
     </Wrapper>
-  )
+  );
 }
